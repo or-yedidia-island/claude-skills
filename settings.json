@@ -1,0 +1,48 @@
+{
+  "awsAuthRefresh": "aws sso login --profile sandbox",
+  "env": {
+    "AWS_PROFILE": "sandbox",
+    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "AWS_REGION": "us-east-1"
+  },
+  "permissions": {
+    "defaultMode": "auto",
+    "allow": [
+      "Bash(get_pr_status *)",
+      "Bash(get_jenkins_console *)",
+      "Bash(get_jenkins_build_status *)",
+      "Bash(rebuild_jenkins_job *)",
+      "Bash(get_last_build_number *)",
+      "Bash(get_allure_report *)",
+      "Bash(wait_for_jenkins_build *)",
+      "Bash(wait_for_jenkins_pr_check *)",
+      "Bash(wait_for_gh_run *)",
+      "Bash(wait_for_pr_check *)",
+      "Bash(update_github_status_for_jenkins *)",
+      "Bash(is_test_flaky *)",
+      "Bash(search_flaky_tests *)",
+      "Bash(get_flaky_stats *)",
+      "Bash(get_collection_tests *)",
+      "Bash(quick_flaky_check *)",
+      "Bash(show_affected_projects *)",
+      "Bash(run_affected_tests *)",
+      "Bash(run_project_tests *)",
+      "Bash(rerun_failed_pr_jobs *)",
+      "Bash(watch_pr *)",
+      "Bash(list_recent_runs *)",
+      "Bash(gh pr *)",
+      "Bash(gh run *)",
+      "Bash(git branch *)",
+      "Bash(git log *)",
+      "Bash(git diff *)"
+    ]
+  },
+  "model": "us.anthropic.claude-opus-4-6-v1",
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); remaining=$(echo \"$input\" | jq -r '.context_window.remaining_percentage // empty'); [ -n \"$remaining\" ] && printf \"Context: %.0f%% remaining\" \"$remaining\""
+  },
+  "effortLevel": "high",
+  "tui": "fullscreen",
+  "skipAutoPermissionPrompt": true
+}
