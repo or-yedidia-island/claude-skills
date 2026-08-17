@@ -1,7 +1,9 @@
-# Only include skills/ and settings.json — ignore everything else
+# Only include skills/, hooks/, and settings.json — ignore everything else
 *
 !.gitignore
 !settings.json
 !skills/
 !skills/**
+!hooks/
+!hooks/**
 .DS_Store
