@@ -150,7 +150,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "input=$(cat); remaining=$(echo \u0022$input\u0022 | jq -r \u0027.context_window.remaining_percentage // empty\u0027); [ -n \u0022$remaining\u0022 ] \u0026\u0026 printf \u0022Context: %.0f%% remaining\u0022 \u0022$remaining\u0022"
+    "command": "bash ~/.claude/statusline/statusline.sh"
   },
   "enabledPlugins": {
     "ai-chat-team@za-dev-utils": true,
