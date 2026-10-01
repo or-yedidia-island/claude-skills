@@ -6,4 +6,6 @@
 !skills/**
 !hooks/
 !hooks/**
+!statusline/
+!statusline/**
 .DS_Store

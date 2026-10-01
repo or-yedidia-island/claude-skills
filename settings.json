@@ -40,7 +40,7 @@
   "model": "us.anthropic.claude-opus-4-6-v1",
   "statusLine": {
     "type": "command",
-    "command": "input=$(cat); remaining=$(echo \"$input\" | jq -r '.context_window.remaining_percentage // empty'); [ -n \"$remaining\" ] && printf \"Context: %.0f%% remaining\" \"$remaining\""
+    "command": "bash ~/.claude/statusline/statusline.sh"
   },
   "effortLevel": "high",
   "tui": "fullscreen",
